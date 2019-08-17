@@ -44,7 +44,7 @@ class ingridientsController extends Controller
         if(isset($ingArray)) {
             $countArray = count($ingArray);
             for ($i = 0; $i < $countArray; $i++) {
-                if ($ingArray != NULL) {
+                if ($ingArray[$i] != NULL) {
                     $name = $ingArray[$i]->name_ingridients;
                     $quantity = $ingArray[$i]->quantity_ingridients;
                     $addIng->addIngridients($idRecipe, $request->$name, $request->$quantity);
